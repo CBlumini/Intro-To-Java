@@ -36,7 +36,9 @@ public class Cat extends Pet {
     @Override
     public void speak() {
         super.speak();
+        int mice = getMiceCaught();
         //this wont print quite rigth
+        //may need to do this similar to the dog method for speak, test first
         if (this.getPainLevel() <= 5) {
             for (int i = 0; i < this.miceCaught; i++) {
                 System.out.println("meow");

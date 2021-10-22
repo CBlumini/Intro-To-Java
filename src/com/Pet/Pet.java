@@ -13,7 +13,6 @@ public abstract class Pet {
 
     public Pet(String name, double health, int painLevel) {
         this.name = name;
-        this.health = health;
         if (health > 10) {
             this.health = 10;
         }
@@ -21,7 +20,7 @@ public abstract class Pet {
             this.health = 1;
         }
         else {
-            this.health = painLevel;
+            this.health = health;
         }
 
         if (painLevel > 10) {

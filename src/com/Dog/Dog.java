@@ -36,15 +36,16 @@ public class Dog extends Pet {
     @Override
     public void speak() {
         super.speak();
+        int pain = this.getPainLevel();
         //these won't print quite right
-        if (this.getPainLevel() <= 5) {
-            for (int i = 0; i < this.getPainLevel(); i++) {
-                System.out.println("bark");
-            }
+        StringBuilder output = new StringBuilder("bark");
+        if (1 < pain) {
+            output.append(" bark".repeat(pain));
+        }
+        if (pain > 5) {
+            System.out.println(output.toString().toUpperCase());
         } else {
-            for (int i = 0; i < this.getPainLevel(); i++) {
-                System.out.println("BARK");
-            }
+            System.out.println(output.toString());
         }
     }
 
