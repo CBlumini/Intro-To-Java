@@ -24,9 +24,9 @@ public class Cat extends Pet {
     @Override
     public int treat() {
         this.heal();
-        if (miceCaught < 4) {
+        if (this.miceCaught < 4) {
             return (int) (this.getPainLevel() * 2 / this.getHealth());
-        } else if (miceCaught <= 7) {
+        } else if (this.miceCaught <= 7) {
             return (int) (this.getPainLevel()/this.getHealth());
         } else{
             return (int) (this.getPainLevel()/this.getHealth()*2);
@@ -38,11 +38,11 @@ public class Cat extends Pet {
         super.speak();
         //this wont print quite rigth
         if (this.getPainLevel() <= 5) {
-            for (int i = 0; i < miceCaught; i++) {
+            for (int i = 0; i < this.miceCaught; i++) {
                 System.out.println("meow");
             }
         } else {
-            for (int i = 0; i < miceCaught; i++) {
+            for (int i = 0; i < this.miceCaught; i++) {
                 System.out.println("MEOW");
             }
         }
@@ -52,7 +52,7 @@ public class Cat extends Pet {
     public boolean equals(Object o) {
         if (o instanceof Cat) {
             Cat cat = (Cat) o;
-            return super.equals(o) && miceCaught == cat.getMiceCaught();
+            return super.equals(o) && this.miceCaught == cat.getMiceCaught();
         } else {
             return false;
         }

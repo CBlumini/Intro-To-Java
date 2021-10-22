@@ -24,9 +24,9 @@ public class Dog extends Pet {
     @Override
     public int treat() {
         this.heal();
-        if (droolRate < 3.5) {
+        if (this.droolRate < 3.5) {
             return (int) (this.getPainLevel() * 2 / this.getHealth());
-        } else if (droolRate <= 7.5) {
+        } else if (this.droolRate <= 7.5) {
             return (int) (this.getPainLevel()/this.getHealth());
         } else{
             return (int) (this.getPainLevel()/this.getHealth()*2);
@@ -52,7 +52,7 @@ public class Dog extends Pet {
     public boolean equals(Object o) {
         if (o instanceof Dog) {
             Dog dog = (Dog) o;
-            return super.equals(o) && droolRate == dog.getDroolRate();
+            return super.equals(o) && this.droolRate == dog.getDroolRate();
         } else {
             return false;
         }
