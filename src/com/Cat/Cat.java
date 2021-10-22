@@ -1,6 +1,5 @@
 package com.Cat;
 
-import com.Dog.Dog;
 import com.Pet.Pet;
 
 public class Cat extends Pet {
@@ -9,6 +8,7 @@ public class Cat extends Pet {
     private int miceCaught;
     public final int DEFAULT_MICE_CAUGHT = 0;
 
+    //constructors
     public Cat(String name, double health, int painLevel, int miceCaught) {
         super(name, health, painLevel);
         this.miceCaught = miceCaught;
@@ -19,7 +19,7 @@ public class Cat extends Pet {
         this.miceCaught = DEFAULT_MICE_CAUGHT;
     }
 
-
+    //methods
 
     @Override
     public int treat() {
@@ -36,6 +36,7 @@ public class Cat extends Pet {
     @Override
     public void speak() {
         super.speak();
+        //this wont print quite rigth
         if (this.getPainLevel() <= 5) {
             for (int i = 0; i < miceCaught; i++) {
                 System.out.println("meow");
