@@ -27,7 +27,7 @@ public class Clinic {
     }
 
 
-
+    //Dog steve = new Dog("Steve", 1.2, 2);
 
 
 }
