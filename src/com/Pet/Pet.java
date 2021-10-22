@@ -85,8 +85,8 @@ public abstract class Pet {
     @Override
     public boolean equals(Object o) {
         if (o instanceof Pet) {
-            Pet player = (Pet) o;
-            return this.name.equals(player.name) ;
+            Pet pet = (Pet) o;
+            return this.name.equals(pet.name) ;
         }
         return false;
     }
