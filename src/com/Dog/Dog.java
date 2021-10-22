@@ -8,7 +8,7 @@ public class Dog extends Pet {
     private double droolRate;
     public final double DEFAULT_DROOL_RATE = 5.0;
 
-    //constrcutors
+    //constructors
     public Dog(String name, double health, int painLevel, double droolRate) {
         super(name, health, painLevel);
         this.droolRate = droolRate;
@@ -26,7 +26,7 @@ public class Dog extends Pet {
         this.heal();
         if (droolRate < 3.5) {
             return (int) (this.getPainLevel() * 2 / this.getHealth());
-        } else if (droolRate >= 3.5 && droolRate <= 7.5) {
+        } else if (droolRate <= 7.5) {
             return (int) (this.getPainLevel()/this.getHealth());
         } else{
             return (int) (this.getPainLevel()/this.getHealth()*2);
@@ -52,7 +52,7 @@ public class Dog extends Pet {
     public boolean equals(Object o) {
         if (o instanceof Dog) {
             Dog dog = (Dog) o;
-            return super.equals(o) && this.droolRate == dog.getDroolRate();
+            return super.equals(o) && droolRate == dog.getDroolRate();
         } else {
             return false;
         }
