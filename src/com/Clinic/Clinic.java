@@ -17,18 +17,29 @@ public class Clinic {
     int day;
 
     //constructors
-    public Clinic (File file) {
+    public Clinic(File file) {
         this.patientFile = file;
         //double health = this.getHealth();
     }
 
-    Clinic (String fileName) {
 
+    //methods
+
+    String nextday(File f) throws FileNotFoundException{
+        return null;
     }
 
+    String nextday(String fileName) throws FileNotFoundException {
+        return null;
+    }
 
-    //Dog steve = new Dog("Steve", 1.2, 2);
+    boolean addToFile(String patientInfo){
+        return false;
+    }
 
+    String addTime(String timeIn, int treatmentTime){
+        return null;
+    }
 
 }
 
