@@ -99,6 +99,7 @@ public class Clinic{
                 line = fileScan.nextLine();
                 tokens = line.split(",");
                 petNames[index] = tokens[0];
+                //may need to read this as strings
                 petTypes[index] = tokens[1];
                 uniqueAtt[index] = Integer.parseInt(tokens[2]);
                 times[index] = Integer.parseInt(tokens[3]);
