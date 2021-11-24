@@ -63,8 +63,5 @@ public class Dog extends Pet {
         return droolRate;
     }
 
-    public void setDroolRate(double droolRate) {
-        this.droolRate = droolRate;
-    }
 }
 

@@ -64,7 +64,4 @@ public class Cat extends Pet {
         return miceCaught;
     }
 
-    public void setMiceCaught(int miceCaught) {
-        this.miceCaught = miceCaught;
-    }
 }

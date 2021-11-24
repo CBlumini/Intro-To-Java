@@ -1,7 +1,9 @@
 package com.Clinic;
 
+
 import com.Cat.Cat;
 import com.Dog.Dog;
+import com.InvalidPetException.InvalidPetException;
 import com.Pet.Pet;
 
 import java.util.Scanner;
@@ -10,14 +12,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
 //https://stackoverflow.com/questions/37758566/when-to-use-a-string-with-filename-or-file-as-argument-to-constructor
 
-public class Clinic {
+public class Clinic{
 
     //***********************instance variables*****************
     File patientFile;
     int day;
     Scanner fileScan = null;
+    private Object InvalidPetException;
 
     //*************************constructors*********************
     public Clinic(File file) {
@@ -52,6 +56,13 @@ public class Clinic {
                 uniqueAtt[index] = Integer.parseInt(tokens[2]);
                 times[index] = Integer.parseInt(tokens[3]);
                 index++;
+            }
+            //do some stuff with the data
+            //may need to make this loop
+            int j = 0;
+            System.out.println("Consultation for " + petNames[j] + " the " + petTypes[j] + " at " + times[j] +".\nWhat is the health of " + petNames[j] + "?\n");
+            if (petTypes[j] instanceof Cat | petTypes[j] instanceof Dog) {
+                throw (Throwable) InvalidPetException;
             }
         }
         catch (FileNotFoundException e) {
@@ -92,6 +103,14 @@ public class Clinic {
                 uniqueAtt[index] = Integer.parseInt(tokens[2]);
                 times[index] = Integer.parseInt(tokens[3]);
                 index++;
+            }
+
+            //do some stuff with the data
+            //may need to make this loop
+            int j = 0;
+            System.out.println("Consultation for " + petNames[j] + " the " + petTypes[j] + " at " + times[j] +".\nWhat is the health of " + petNames[j] + "?\n");
+            if (petTypes[j] instanceof Cat | petTypes[j] instanceof Dog) {
+                throw (Throwable) InvalidPetException;
             }
 
         }
